@@ -25,7 +25,7 @@
         <div class="columns is-centered">
           <div class="column has-text-centered">
             <h1 class="title is-1 publication-title">
-              StreamBWE: A Streamable and Efficient Neural Model for Speech Bandwidth Extension in MDCT Spectral Domain
+              Dual-Modal Streaming Neural Speech Bandwidth Extension with Articulation-aware Lip Video Assistance
             </h1>
 
             <div class="is-size-5 publication-authors">
@@ -62,13 +62,14 @@
           <h2 class="title is-3">Abstract</h2>
           <div class="content has-text-justified">
             <p id="abstract">
-              This paper proposes StreamBWE, a streaming-capable neural model for speech bandwidth extension (BWE), formulated in the modified discrete cosine transform (MDCT) spectral domain.
-              By adopting a fully causal architecture and modeling the compact, real-valued MDCT spectrum, the proposed StreamBWE supports low-latency streaming inference while using lightweight modules suitable for real-time, low-resource scenarios.
-              In particular, StreamBWE begins by deriving the narrowband MDCT spectrum from the input narrowband speech.
-              A lightweight, fully causal-convolutional SnBeConvNeXt model, that is, a ConvNeXt backbone equipped with SnakeBeta periodic activations, is subsequently employed to estimate the wideband MDCT spectrum, which is finally converted to a waveform via inverse MDCT (IMDCT).
-              We train StreamBWE adversarially with a multi-resolution MDCT discriminator (MR-MDCTD) that judges MDCT spectra across time-frequency scales, and add a frequency-weighted MDCT spectral loss to emphasize high-frequency details.
-              Experimental results indicate that StreamBWE delivers comparable or superior quality and intelligibility on both 16 kHz and 48 kHz target sampling rates, with only 2.57 GFLOPs and under 2.5 ms latency, highlighting both computational efficiency and real-time capability.
-              In addition, cross-domain experiments and downstream applications further validate StreamBWE's robust generalization to other audio data and its practical deployability within streaming speech-coding pipelines.
+              Speech bandwidth extension (BWE) seeks to restore the high-frequency components lost in narrowband speech. 
+              However, when the extension ratio is large, it often results in compromised quality and intelligibility. 
+              Furthermore, many existing approaches neglect the essential requirement for low-latency streaming, thereby limiting their practical applicability in real-time contexts.
+              Therefore, this paper proposes DMSBWE, a Dual-Modal Streaming neural speech BWE model, with lip video injected to improve the articulation of the extended speech.
+              For the speech modality, a streaming causal convolutional network is employed to extend the real-valued, compact, and invertible modified discrete cosine transform (MDCT) spectrum. 
+              For the visual modality, a streaming causal analysis-synthesis network is designed to extract articulation features from lip video. 
+              To handle scenarios with or without lip video during inference, articulation features are integrated into the speech BWE stream, with explicit incorporation through global feature concatenation when visual input is available, and implicit integration via feature knowledge distillation when it is absent.
+              Experimental results show that, with a large extension from 4 kHz to 48 kHz, the proposed DMSBWE improves ViSQOL by 0.25 and reduces WER by nearly 6%, compared to speech-only unimodal BWE, while maintaining ultra-low latency of 0.83 ms, confirming that articulation features extracted from lip video effectively enhance the quality and intelligibility of the extended speech.
             </p>
           </div>
         </div>
