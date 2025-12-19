@@ -27,7 +27,7 @@ const SECTIONS = [
     id: "8kto48k",
     title: "II. 8 kHz to 48 kHz",
     dir: "8kto48k",
-    samples: ["04me_trim_022_xaud", "11fe_trim_023_xaud", "14fe_trim_018_xaud", "15fe_trim_023_xaud", "26fs_trim_015_xaud"],
+    samples: ["04me_trim_022_xaud", "14fe_trim_018_xaud", "16fe_trim_023_xaud", "42fe_trim_022_xaud", "53fe_trim_009_xaud"],
   },
   {
     id: "12kto48k",
