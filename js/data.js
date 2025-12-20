@@ -9,7 +9,7 @@ const METHODS = [
   { key: "Wideband",  label: "Wideband"  },
   { key: "DMSBWE(Explicit)",  label: "DMSBWE(Explicit)"      },
   { key: "DMSBWE(Implicit)",  label: "DMSBWE(Implicit)"  },
-  { key: "DMSBWE(Absent)",   label: "DMSBWE(Absent)DMSBWE(Absent)"   },
+  { key: "DMSBWE(Absent)",   label: "DMSBWE(Absent)"   },
   { key: "UDM+", label: "UDM+" },
   { key: "NVSR",      label: "NVSR"      },
   { key: "AP-BWE",    label: "AP-BWE"    },
